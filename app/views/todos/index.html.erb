@@ -1,0 +1,19 @@
+<div ng-app="app">
+
+<h1>Here is your to do List:</h1>
+	
+	<div ng-controller="todoCtrl">
+		<ul>
+			<li ng-repeat="purpleHippo in todos track by index">
+			<p>{{purpleHippo}}</p>
+			<button ng-click="done($index)">Take me out!</button>
+			</li>
+		</ul>
+		<div>
+			Add New:
+			<input ng-model="newTodo">
+			<input type="submit" value="Add Todo" ng-click="addTodo(newTodo)">
+		</div>
+	</div>
+</div
+
